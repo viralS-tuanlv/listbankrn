@@ -1,28 +1,33 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, FlatList } from 'react-native'
 
 // import StarImage from '../assets/images/star.png'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class Star extends Component {
+  randomStar = () => {
+    let times = Math.floor(Math.random() * 5) + 1
+    console.log(times)
+    let data = []
+    for (let i = 0; i < times; i++) {
+      data.push(i)
+    }
+
+    console.log(data)
+    // let props = {
+    //   styles.starIcon ,name='md-star', size={ 20}, color='yellow'
+    // }
+    // let icon = (
+    //   <Icon style={styles.starIcon} name='md-star' size={20} color='yellow' />
+    // )
+
+    return data.map(item => (
+      <Icon key={item} name='md-star' size={16} color='yellow' />
+    ))
+  }
+
   render() {
-    return (
-      <View style={styles.starSection}>
-        {/* <Image source={StarImage} style={styles.starImage} /> */}
-        <Icon style={styles.starIcon} name='md-star' size={20} color='yellow' />
-        <Icon style={styles.starIcon} name='md-star' size={20} color='yellow' />
-
-        <Icon style={styles.starIcon} name='md-star' size={20} color='yellow' />
-
-        <Icon style={styles.starIcon} name='md-star' size={20} color='yellow' />
-        {/* <Icon
-          style={styles.starIcon}
-          name='md-star-outlined'
-          size={20}
-          color='yellow'
-        /> */}
-      </View>
-    )
+    return <View style={styles.starSection}>{this.randomStar()}</View>
   }
 }
 
