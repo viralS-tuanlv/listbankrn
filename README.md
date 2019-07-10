@@ -1,0 +1,3 @@
+- add icon search to TextInput Component
+- make flatlist item UI lightweight and focus
+- fetching data
