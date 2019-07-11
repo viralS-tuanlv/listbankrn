@@ -46,20 +46,22 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.58,
     shadowRadius: 16.0,
 
-    elevation: 24
+    elevation: 5
   },
   searchIcon: {
     paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 10,
-    paddingRight: 50
+    paddingRight: 20
   },
   input: {
     flex: 1,
-    paddingTop: 15,
+    paddingTop: 2,
     paddingRight: 10,
     paddingBottom: 10,
+    marginTop: 10,
     marginLeft: 30,
+    // marginBottom: 15,
     backgroundColor: '#fff',
     color: '#424242'
   }

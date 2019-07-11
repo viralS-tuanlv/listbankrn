@@ -21,12 +21,12 @@ export default class Header extends Component {
     return (
       <ImageBackground source={BorderImage} style={styles.headerSection}>
         <View style={styles.headerSection}>
-          <Image source={RightImage} style={styles.image} />
+          <Image source={RightImage} style={styles.image1} />
           <View>
             <Text style={styles.title}>CariMakan</Text>
             <Text style={styles.detail}>Discover Eatery Around You</Text>
           </View>
-          <Image source={RightImage} style={styles.image} />
+          <Image source={RightImage} style={styles.image2} />
         </View>
       </ImageBackground>
     )
@@ -67,8 +67,15 @@ const styles = StyleSheet.create({
   detail: {
     fontSize: 19
   },
-  image: {
-    margin: 15,
+  image1: {
+    marginLeft: 35,
+    marginTop: 15,
+    height: 22,
+    width: 22
+  },
+  image2: {
+    marginRight: 35,
+    marginTop: 15,
     height: 22,
     width: 22
   }
