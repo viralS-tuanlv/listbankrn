@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 
-import CardView from 'react-native-cardview'
+// import CardView from 'react-native-cardview'
 
 import Star from './Star'
 
@@ -9,24 +9,18 @@ import ImageFood from '../assets/images/Image.png'
 
 export default class Item extends Component {
   render() {
-    
-
     return (
-      
-
-
-        <View style={styles.itemSection}>
-          <Image source={ImageFood} style={styles.image} />
-          <View>
-            <Text style={styles.textTitle}>Hummingbied</Text>
-            <View style={styles.vote}>
-              <Star />
-              <Text style={styles.voteNumber}>35</Text>
-            </View>
-            <Text style={styles.textAddress}>Address</Text>
+      <View style={styles.itemSection}>
+        <Image source={ImageFood} style={styles.image} />
+        <View>
+          <Text style={styles.textTitle}>Hummingbied</Text>
+          <View style={styles.vote}>
+            <Star />
+            <Text style={styles.voteNumber}>35</Text>
           </View>
+          <Text style={styles.textAddress}>Address</Text>
         </View>
-      
+      </View>
     )
   }
 }
@@ -34,29 +28,29 @@ export default class Item extends Component {
 const styles = StyleSheet.create({
   itemSection: {
     alignItems: 'center',
-    padding: 16,
+    padding: 5,
     borderRadius: 4,
-    backgroundColor: 'orange',
+    backgroundColor: '#fff',
     shadowColor: 'black',
     // shadowRadius: 10,
     shadowOpacity: 0.3,
     shadowOffset: { width: 10, height: 10 },
     marginBottom: 16,
     flexDirection: 'row',
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
-	width: 0,
-	height: 12,
+      width: 0,
+      height: 12
     },
     shadowOpacity: 0.58,
-    shadowRadius: 16.00,
+    shadowRadius: 16.0,
 
-elevation: 24,
+    elevation: 24
   },
   image: {
-    borderRadius: 500,
-    height: 70,
-    width: 70,
+    borderRadius: 33,
+    height: 66,
+    width: 66,
     backgroundColor: 'grey'
   },
   textTitle: {
@@ -73,7 +67,7 @@ elevation: 24,
   voteNumber: {
     color: 'red',
     fontSize: 14,
-    backgroundColor: 'grey',
+    backgroundColor: '#D2C3CB',
     position: 'absolute',
     right: 25
   },
