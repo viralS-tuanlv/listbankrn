@@ -5,13 +5,15 @@ import { StyleSheet, View, Image, Text } from 'react-native'
 
 import Star from './Star'
 
-import ImageFood from '../assets/images/Image.png'
+import ImageFood from '../assets/images/circle-cropped2.png'
 
 export default class Item extends Component {
   render() {
     return (
       <View style={styles.itemSection}>
-        <Image source={ImageFood} style={styles.image} />
+        <View style={styles.borderImage}>
+          <Image source={ImageFood} style={styles.image} />
+        </View>
         <View>
           <Text style={styles.textTitle}>Hummingbied</Text>
           <View style={styles.vote}>
@@ -45,13 +47,30 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.58,
     shadowRadius: 16.0,
 
-    elevation: 5
+    elevation: 10
   },
   image: {
     borderRadius: 33,
-    height: 66,
-    width: 66,
+    height: 60,
+    width: 60,
     backgroundColor: 'grey'
+  },
+  borderImage: {
+    // shadowColor: '#000',
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 12
+    // },
+    // shadowOpacity: 0.18,
+    // shadowRadius: 16.0,
+
+    // elevation: 24
+    height: 64,
+    width: 64,
+    borderRadius: 37,
+    backgroundColor: '#D2C3CB',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   textTitle: {
     fontSize: 20,
@@ -69,7 +88,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     backgroundColor: '#D2C3CB',
     position: 'absolute',
-    right: 25
+    right: 25,
+    paddingLeft: 4,
+    paddingRight: 4
   },
   textAddress: {
     fontSize: 16,

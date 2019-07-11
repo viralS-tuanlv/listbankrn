@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     // paddingTop: 10,
     marginLeft: 35,
     marginRight: 35,
+    marginTop: 10,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.58,
     shadowRadius: 16.0,
 
-    elevation: 5
+    elevation: 10
   },
   searchIcon: {
     paddingTop: 10,

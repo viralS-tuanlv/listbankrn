@@ -8,12 +8,19 @@ import {
   Image
 } from 'react-native'
 
+import LeftImage from '../assets/images/menu.png'
 import RightImage from '../assets/images/rightCorn.png'
 import BorderImage from '../assets/images/newRectangle10.png'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 // import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class Header extends Component {
+  handlePress = () => {
+    this.props.goToDrawer()
+  }
+
   render() {
+    // const { navigate } = this.props.navigation
     // console.log({
     //   width: Dimensions.get('window').width,
     //   height: Dimensions.get('window').height
@@ -21,12 +28,19 @@ export default class Header extends Component {
     return (
       <ImageBackground source={BorderImage} style={styles.headerSection}>
         <View style={styles.headerSection}>
-          <Image source={RightImage} style={styles.image1} />
+          <TouchableOpacity
+            style={styles.borderImage}
+            onPress={this.handlePress}
+          >
+            <Image source={LeftImage} style={styles.image1} />
+          </TouchableOpacity>
           <View>
             <Text style={styles.title}>CariMakan</Text>
             <Text style={styles.detail}>Discover Eatery Around You</Text>
           </View>
-          <Image source={RightImage} style={styles.image2} />
+          <View style={styles.borderImage}>
+            <Image source={RightImage} style={styles.image2} />
+          </View>
         </View>
       </ImageBackground>
     )
@@ -43,15 +57,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row'
     // backgroundColor: 'yellow', // background se che mat iamge nen phai bo di
-    // shadowColor: '#000',
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 12
-    // },
-    // shadowOpacity: 0.58,
-    // shadowRadius: 16.0,
-
-    // elevation: 24
   },
   title: {
     paddingLeft: 27,
@@ -59,7 +64,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     marginBottom: 0,
-    color: 'pink',
+    color: '#F60B8A',
     fontSize: 28,
     paddingTop: 10,
     fontWeight: 'bold'
@@ -70,13 +75,26 @@ const styles = StyleSheet.create({
   image1: {
     marginLeft: 35,
     marginTop: 15,
-    height: 22,
-    width: 22
+    height: 20,
+    width: 20
+    // borderColor: 'white'
   },
   image2: {
     marginRight: 35,
     marginTop: 15,
-    height: 22,
-    width: 22
+    height: 20,
+    width: 20
+    // borderColor: 'white'
+  },
+  borderImage: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 12
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+
+    elevation: 5
   }
 })
