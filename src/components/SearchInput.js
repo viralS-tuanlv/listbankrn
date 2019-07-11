@@ -10,7 +10,7 @@ export default class SearchInput extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={styles.searchSection}>
+      <View style={styles.searchSection}>
         <TextInput
           onChangeText={this.handleSearch}
           placeholder='Search other place...'
@@ -20,10 +20,10 @@ export default class SearchInput extends Component {
         <Icon
           style={styles.searchIcon}
           name='ios-search'
-          size={20}
+          size={25}
           color='#000'
         />
-      </KeyboardAvoidingView>
+      </View>
     )
   }
 }
@@ -34,8 +34,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow',
-    paddingTop: 50
+    backgroundColor: '#fff',
+    // paddingTop: 10,
+    marginLeft: 35,
+    marginRight: 35,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 8
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+
+    elevation: 24
   },
   searchIcon: {
     paddingTop: 10,
@@ -45,10 +56,10 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    paddingTop: 10,
+    paddingTop: 15,
     paddingRight: 10,
     paddingBottom: 10,
-    paddingLeft: 50,
+    marginLeft: 30,
     backgroundColor: '#fff',
     color: '#424242'
   }
