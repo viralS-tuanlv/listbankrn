@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
     elevation: 24
   },
   image: {
-    borderRadius: 500,
-    height: 65,
-    width: 65,
+    borderRadius: 33,
+    height: 66,
+    width: 66,
     backgroundColor: 'grey'
   },
   textTitle: {
