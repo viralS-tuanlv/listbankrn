@@ -22,7 +22,7 @@ export default class Star extends Component {
     // )
 
     return data.map(item => (
-      <Icon key={item} name='md-star' size={16} color='yellow' />
+      <Icon key={item} name='md-star' size={16} color='orange' />
     ))
   }
 
