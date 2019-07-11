@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   voteNumber: {
     color: 'red',
     fontSize: 14,
-    backgroundColor: '#666D7C',
+    backgroundColor: '#D2C3CB',
     position: 'absolute',
     right: 25
   },
