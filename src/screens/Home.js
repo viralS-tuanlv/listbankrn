@@ -56,7 +56,7 @@ export default class Home extends Component {
 
             this.setState({names: newdata, isLoading: false})
 
-            const datafetched = response.data.data
+            // const datafetched = response.data.data
             // const newdata = datafetched.forEach((item) => item = [...item, ])
             // console.log(newdata, 'new')
         }).catch(() => setState({isLoading: true}))
@@ -79,10 +79,15 @@ export default class Home extends Component {
     }
 
     search = searchValue => {
+        if (searchValue === '') {
+            this.setState({names: this.state.names})
+        }
         // console.log(searchValue)
         const newNames = this.state.names.filter(item => item.name.includes(searchValue))
         // console.log('new', newNames)
-        this.setState({names: newNames, nameSearch: 'searchValue'})
+
+
+        this.setState( {names: newNames, nameSearch: 'searchValue'})
     }
 
     render() {
