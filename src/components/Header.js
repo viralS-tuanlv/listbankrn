@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 
 import LeftImage from '../assets/images/menu.png'
-import RightImage from '../assets/images/rightCorn.png'
+import RightImage from '../assets/images/Group42.png'
 import BorderImage from '../assets/images/newRectangle10.png'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 // import Icon from 'react-native-vector-icons/Ionicons'

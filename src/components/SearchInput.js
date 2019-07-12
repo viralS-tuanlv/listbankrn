@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, TextInput, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, View, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class SearchInput extends Component {
-  handleSearch = () => {
-    console.log(this)
+  handleSearch = (searchValue) => {
+    this.props.search(searchValue)
   }
+
+  // pressSearchIcon =() => {
+  //   this.props.search()
+  // }
 
   render() {
     return (
@@ -17,12 +21,14 @@ export default class SearchInput extends Component {
           style={styles.input}
           underlineColorAndroid='transparent'
         />
-        <Icon
-          style={styles.searchIcon}
-          name='ios-search'
-          size={25}
-          color='#000'
-        />
+
+          <Icon
+              style={styles.searchIcon}
+              name='ios-search'
+              size={25}
+              color='#000'
+          />
+
       </View>
     )
   }

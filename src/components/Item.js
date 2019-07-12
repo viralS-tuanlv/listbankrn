@@ -5,22 +5,25 @@ import { StyleSheet, View, Image, Text } from 'react-native'
 
 import Star from './Star'
 
-import ImageFood from '../assets/images/circle-cropped2.png'
+// import ImageFood from '../assets/images/circle-cropped2.png'
 
 export default class Item extends Component {
   render() {
+    const { item } = this.props
+    // console.log(item)
+
     return (
       <View style={styles.itemSection}>
         <View style={styles.borderImage}>
-          <Image source={ImageFood} style={styles.image} />
+          {/*<Image source={{ uri: item.avatar }} style={styles.image} />*/}
         </View>
         <View>
-          <Text style={styles.textTitle}>Hummingbied</Text>
+          <Text style={styles.textTitle}>{item.item.name}</Text>
           <View style={styles.vote}>
             <Star />
-            <Text style={styles.voteNumber}>35</Text>
+            {/*<Text style={styles.voteNumber}>{item.votePeople}</Text>*/}
           </View>
-          <Text style={styles.textAddress}>Address</Text>
+          {/*<Text style={styles.textAddress}>{item.address}</Text>*/}
         </View>
       </View>
     )
@@ -33,10 +36,10 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 4,
     backgroundColor: '#fff',
-    shadowColor: 'black',
+    // shadowColor: 'black',
     // shadowRadius: 10,
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 10, height: 10 },
+    // shadowOpacity: 0.3,
+    // shadowOffset: { width: 10, height: 10 },
     marginBottom: 16,
     flexDirection: 'row',
     shadowColor: '#000',
@@ -69,11 +72,11 @@ const styles = StyleSheet.create({
     width: 64,
     borderRadius: 37,
     backgroundColor: '#D2C3CB',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center'
   },
   textTitle: {
-    fontSize: 20,
+    fontSize: 10,
     fontWeight: 'bold',
     paddingLeft: 20,
     // position: 'absolute',

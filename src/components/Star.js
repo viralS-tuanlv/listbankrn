@@ -7,13 +7,13 @@ import Icon from 'react-native-vector-icons/Ionicons'
 export default class Star extends Component {
   randomStar = () => {
     let times = Math.floor(Math.random() * 5) + 1
-    console.log(times)
+    // console.log(times)
     let data = []
     for (let i = 0; i < times; i++) {
       data.push(i)
     }
 
-    console.log(data)
+    // console.log(data)
     // let props = {
     //   styles.starIcon ,name='md-star', size={ 20}, color='yellow'
     // }
