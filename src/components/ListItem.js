@@ -16,7 +16,7 @@ export default class ListItem extends React.Component {
 
         if (this.props.isLoading) {
             return (
-                <View style={{flex: 1, padding: 20}}>
+                <View style={{flex: 1, padding: 20, justifyContent: 'center', alignItems: 'center'}}>
                     <ActivityIndicator size="large"/>
                 </View>
             )
